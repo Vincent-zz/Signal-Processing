@@ -14,14 +14,14 @@ $$
 
 ## Shifting
 
-**Time-Shift**:
+- **Time-Shift**:
 
 $$
 x(t - t') \leftrightarrow X(w)e^{-jwt'}\\
 x[n - n'] \leftrightarrow X(w)e^{-jwn'}
 $$
 
-**Frequency-Shift**:
+- **Frequency-Shift**:
 
 $$
 x(t)e^{jw't} \leftrightarrow X(w-w')\\
@@ -30,7 +30,7 @@ $$
 
 ## Differential and Integration
 
-**Differential**:
+- **Differential**:
 
 $$
 \begin{aligned}
@@ -39,11 +39,12 @@ x[n] - x[n - 1] &\leftrightarrow (1 - e^{-jw}) X(w)
 \end{aligned}
 $$
 
-**Integration/Accumulation**:
+- **Integration/Accumulation**:
 
-for FS, L, Z: Inversion of Differential
+  for FS, L, Z: Inversion of Differential
 
-for FT:
+  for FT:
+
 $$
 \begin{aligned}
 \int_{-\infty}^{t} x(t)dt &= x(t) \ast u(t)\\
@@ -67,7 +68,7 @@ $$
 
 ## **2. Convolution and Multiplication**
 
-**FT**:
+- **FT**:
 
 $$
 \begin{aligned}
@@ -76,7 +77,7 @@ xy &\leftrightarrow \frac{1}{2\pi}X(w)(\ast/\circledast)Y(w)
 \end{aligned}
 $$
 
-**FS**:
+- **FS**:
 
 $$
 \begin{aligned}
@@ -85,7 +86,7 @@ xy &\leftrightarrow X_k(\ast/\circledast)Y_k\\
 \end{aligned}
 $$
 
-**L, Z**:
+- **L, Z**:
 
 $$
 \begin{aligned}
@@ -106,7 +107,7 @@ $$
 
 ## **3. Some Conclusions**
 
-**F**:
+- **F**:
 
 $$
 x\text{--real} \leftrightarrow
