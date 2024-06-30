@@ -1,6 +1,6 @@
 # Basis of Fourier Theory
 
-## 1. Fourier-Series and Transform
+## 1. Fourier-Series/Transform
 
 From the perspective of *Linear Space*:
 
@@ -49,44 +49,10 @@ $sum()$|$\int$ / $\sum$|$\frac{1}{2\pi}\int$
 
 ## 2. Connections
 
-- **CT to DT**--*sampling*
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-<div class="center">
-
-$x(t)$ |$x_c(t) = x(t)\sum_{-\infty}^{+\infty}\delta(t-kT_s)$|$x[n] = x(nT_s)$
-:---:|:---:|:---:
-$X(jw)$|$X_c(jw) = \frac{1}{T_s}X(jw)R_{w_s}$|$X(e^{jw}) = X_c(jw\times \frac{w_s}{2\pi})$
-\- |Periodical-Extension($w_s$)|Scaling($w_s$ to $2\pi$)
-</div>
-
 - **FS to FT**
 
 $$
 X(w) = 2\pi \sum_{-\infty}^{+\infty}X_k \delta(w-kw_0)
-$$
-
-- **DTFT to DFT**--*sampling in frequency domain*
-
-$$
-x[n], 0 \le n \le N - 1\\
-X[k] = X(e^{jw})\large{|}_{w = \frac{2\pi}{N}k}
-$$
-
-- **DTFS to DFT**
-
-$$
-x[n], 0 \le n \le N - 1\\
-\tilde{x}[n] = x[n]R_N\\
-X[k] = \tilde{X}_k
 $$
 
 - **CTFT to L**
@@ -146,3 +112,31 @@ Z|$\mathcal{F}\{x[n]r^{-n}\}$ Converge|$\text{ROC}_Z(\|z\|)$
 L|$\mathcal{F}\{x(t)e^{-\sigma t}\}$ Converge|$\text{ROC}_L(\text{Re}\{s\})$
 
 </div>
+
+ROC of L/Z Transform:
+
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+
+$\quad$|left-sided|right-sided|double-sided(infinite)|finite|rational
+:---:|:---:|:---:|:---:|:---:|:---:
+L-$\text{Re}\{s\}$|$(-\infty, \sigma_H)$|$(\sigma_L, +\infty)$|$(\sigma_L, \sigma_H)$|$(-\infty, +\infty)$|bounded by poles
+Z-$\|z\|$|$(0, r_H)$|$(r_L, +\infty)$|$(r_L, r_H)$|$(0, +\infty)$|bounded by poles
+
+</div>
+
+\* rational transform: ($m$ zeros, $n$ poles)
+
+$$
+H(s/z) = \frac{\prod_m (s/z) - z_k}{\prod_n (s/z) - p_k}
+$$
+
+\* whether boundries like $0, \infty$ are included in ROC depends on specific $h[n]$
