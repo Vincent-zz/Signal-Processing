@@ -62,7 +62,7 @@ $x[n]$|$x_d[n] = x[Mn]$|$x_e[n] = \begin{cases}x[\frac{n}{L}]&, n = kL\\0&,\text
 $X(e^{jw})$|$\text{Vertical: }\frac{1}{M}\\\text{Horizonal: Stretching } M \text{ around }2k\pi$|$\text{Horizonal: Compressing } L$
 </div>
 
-## 2. Implementations of $H(s)$
+## 2. Implementations of Digital System
 
 (1) **Difference-Equation**
 
@@ -84,7 +84,7 @@ $$
 
 It's easy to implement its *Convolution* with finite $h[n], 0 \le n \le N - 1$ by digital chips
 
-## 3. DSP Systems
+## 3. Common Digital Systems
 
 (1) **All-Pass System**
 
@@ -93,6 +93,8 @@ H(z) = \prod \frac{z^{-1} - z_0}{1-z^*_0z^{-1}}
 $$
 
 implemented by difference-equation
+
+for casual stable LTI all-pass system: $grd(w) > 0$
 
 (2) **Linear-Phase System**
 
@@ -104,15 +106,6 @@ $$
 
 $$
 h[n], 0 \le n \le M\\
-$$
-
-about system function $H(z)$:
-
-$$
-H(z) = \begin{cases}
-z^{-M}H(z^{-1}), \text{for: I II}\\
--z^{-M}H(z^{-1}), \text{for: III IV}
-\end{cases}
 $$
 
 <style>
@@ -138,6 +131,28 @@ IV|$h[n] = -h[M - n]$|$M\text{ is odd}$|$\frac{\pi}{2}$|$-z^{-M}H(z^{-1})$
 (3) **Min-Phase System**
 
 All zeros and poles of casual, stable $H(z)$ are within unit-circle
+
+## 4. Digital Filter Design
+
+Ideal filter $h[n]$ is *infinite* and *double-sided*, which means it can't be implemented in practice
+
+Gain of Filter
+
+- Pass Band $[0, w_p]$: $1 \pm \delta_p$
+- Transition Band $[w_p, w_s]$: monotonic decreasing
+- Stop Band $[w_s, \pi]$: $\le \delta_s$
+
+**Method I**: from continuous-time filter
+
+$$
+H(z)\Leftarrow H_c(s)
+$$
+
+**Method II**: window function
+
+$$
+h[n] = w[n]h_{\text{ideal}}[n]
+$$
 
 ## **Part II: Frequency Analyze of Digital Signal**
 
@@ -183,5 +198,3 @@ Window function: $w[n], 0 \le n \le N - 1$
 There are many types of window function: Rectangle, Hanning, Hamming, Blackman, etc
 
 ## 3. DFT Algorithm: FFT
-
-

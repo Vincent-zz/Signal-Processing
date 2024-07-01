@@ -126,7 +126,7 @@ ROC of L/Z Transform:
 </style>
 <div class="center">
 
-$\quad$|left-sided|right-sided|double-sided(infinite)|finite|rational
+$\quad$|Left-sided|Right-sided|Double-sided(infinite)|Finite|Rational
 :---:|:---:|:---:|:---:|:---:|:---:
 L-$\text{Re}\{s\}$|$(-\infty, \sigma_H)$|$(\sigma_L, +\infty)$|$(\sigma_L, \sigma_H)$|$(-\infty, +\infty)$|bounded by poles
 Z-$\|z\|$|$(0, r_H)$|$(r_L, +\infty)$|$(r_L, r_H)$|$(0, +\infty)$|bounded by poles
@@ -136,7 +136,7 @@ Z-$\|z\|$|$(0, r_H)$|$(r_L, +\infty)$|$(r_L, r_H)$|$(0, +\infty)$|bounded by pol
 \* rational transform: ($m$ zeros, $n$ poles)
 
 $$
-H(s/z) = \frac{\prod_m (s/z) - z_k}{\prod_n (s/z) - p_k}
+H(s/z) = \frac{\prod_M ((s/z) - z_k)}{\prod_N ((s/z) - p_k)}
 $$
 
 \* whether boundries like $0, \infty$ are included in ROC depends on specific $h[n]$

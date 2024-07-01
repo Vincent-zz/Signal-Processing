@@ -40,7 +40,7 @@ Properties of LTI System:
 Memoryless|Invertible|Causality|Stability
 :---:|:---:|:---:|:---:
 $h = K\delta$|$h \ast h_I = \delta$|$h = 0, t/n < 0$|$\sum_{\infty}/\int_{\infty} \|h\| < \infty$
-$\quad$|$\quad$|Right-sided|$\text{FT of }h\text{ converge}\\ \text{Frequency Response exists}$
+$\quad$|$\quad$|$\text{Re}\{s\} = (\sigma, +\infty]\\\|z\| = (r, +\infty]$|$\sigma = 0 \in \text{ROC}_L\\r = 1\in \text{ROC}_Z$
 
 </div>
 
@@ -57,7 +57,7 @@ $$
 
 System function of LTI system that can be expressed by differential/difference-equations are all *rational*
 
-So, usually we **only** talk about **rational** system
+**So, usually we only talk about rational system** 
 
 ## 4. Frequency Response of (Stable) LTI System
 
@@ -77,7 +77,7 @@ $$
 \end{cases}
 $$
 
-## 5. Types of LTI System
+## 5. Common LTI Systems
 
 (1) **All-Pass System**
   

@@ -123,3 +123,9 @@ x\text{--real, even} &\leftrightarrow X\text{--real, even}\\
 x\text{--real, odd} &\leftrightarrow X\text{--pure imaginary, odd}
 \end{cases}
 $$
+
+- **L, Z**:
+
+$$
+x\text{--real} \leftrightarrow \text{zeros(/poles) show up in conjugate pairs}
+$$
