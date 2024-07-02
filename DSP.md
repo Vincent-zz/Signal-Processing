@@ -180,7 +180,7 @@ $$
 
 $$
 \tilde{x}[n] = x[n]R_N\\
-X[k] = \tilde{X}_k
+X[k] = N\tilde{X}_k
 $$
 
 Properties of DFT $\Leftarrow$ Properties of DTFS
@@ -198,3 +198,45 @@ Window function: $w[n], 0 \le n \le N - 1$
 There are many types of window function: Rectangle, Hanning, Hamming, Blackman, etc
 
 ## 3. DFT Algorithm: FFT
+
+(1)**Decimation-In-Time**
+
+$$
+x[n], 0 \le n \le N - 1\\
+N = 2^L\\
+\begin{cases}
+g[n] = x[2n]&, 0 \le n \le \frac{N}{2} - 1\\
+h[n] = x[2n + 1]&, 0 \le n \le \frac{N}{2} - 1
+\end{cases}
+$$
+
+$$
+\Rightarrow
+\begin{cases}
+X[k] &= G[k] + H[k]e^{-jk\frac{2\pi}{N}}\\
+X[\frac{N}{2} + k] &= G[k] - H[k]e^{-jk\frac{2\pi}{N}}\\
+\end{cases}
+$$
+
+Input $x[n]$ in *reverse-bit-order*, through a tree structure (with $L$ layers), output $X[k]$
+
+(2)**Decimation-In-Frequency**
+
+$$
+x[n], 0 \le n \le N - 1\\
+N = 2^L\\
+\begin{cases}
+g[n] = x[n] + x[\frac{N}{2} + n]&, 0 \le n \le \frac{N}{2} - 1\\
+h[n] = (x[n] - x[\frac{N}{2} + n])e^{-j\frac{2\pi}{N}n}&, 0 \le n \le \frac{N}{2} - 1
+\end{cases}
+$$
+
+$$
+\Rightarrow
+\begin{cases}
+X[2r] &= G[r]\\
+X[2r + 1] &= H[r]
+\end{cases}
+$$
+
+Input $x[n]$, through a tree structure (with $L$ layers), output $X[k]$ in *reverse-bit-order*
