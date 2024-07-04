@@ -240,3 +240,17 @@ X[2r + 1] &= H[r]
 $$
 
 Input $x[n]$, through a tree structure (with $L$ layers), output $X[k]$ in *reverse-bit-order*
+
+\* Complexity of $N$ point FFT:
+
+- $\frac{NL}{2}$: complex multiplication
+- $NL$: complex addition
+
+\*FFT for real sequence
+
+$$
+x_1[n] = x[2n]\\
+x_2[n] = x[2n+1]\\
+y[n] = x_1[n] + jx_2[n]\\
+
+$$
