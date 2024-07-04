@@ -145,13 +145,13 @@ Gain of Filter
 **Method I**: from continuous-time filter
 
 $$
-H(z)\Leftarrow H_c(s)
+H(z) = \frac{T_dA_k}{1 - e^{s_kT_d}z^{-1}}\Leftarrow H_c(s) = \sum \frac{A_k}{s - s_k}
 $$
 
 **Method II**: window function
 
 $$
-h[n] = w[n]h_{\text{ideal}}[n]
+h[n] = w[n]h_{\text{ideal}}[n]\\
 $$
 
 ## **Part II: Frequency Analyze of Digital Signal**

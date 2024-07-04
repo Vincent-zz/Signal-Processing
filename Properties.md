@@ -77,7 +77,7 @@ xy &\leftrightarrow \frac{1}{2\pi}X(w)(\ast/\circledast)Y(w)
 \end{aligned}
 $$
 
-- **FS**:
+- **FS**: we use **periodic convolution**
 
 $$
 \begin{aligned}
@@ -86,7 +86,16 @@ xy &\leftrightarrow X_k(\ast/\circledast)Y_k\\
 \end{aligned}
 $$
 
-- **L, Z**:
+- **DFT**: we use **cyclic convolution**
+
+$$
+\begin{aligned}
+x \circledcirc y &\leftrightarrow X[k]Y[k]\\
+xy &\leftrightarrow \frac{1}{N}X[k]\circledcirc Y[k]\\
+\end{aligned}
+$$
+
+- **L, Z**
 
 $$
 \begin{aligned}
@@ -99,6 +108,16 @@ $$
 
 $$
 \tilde{x}[n] \circledast \tilde{y}[n] = x[n] \ast \tilde{y}[n] = \tilde{x}[n] \ast y[n] = (x[n] \ast y[n])R_N\\
+\begin{cases}
+\tilde{x}[n] = x[n]R_N\\
+\tilde{y}[n] = y[n]R_N
+\end{cases}
+$$
+
+\* about $\circledcirc$:
+
+$$
+x[n]\circledcirc y[n] = \tilde{x}[n] \circledast\tilde{y}[n], 0 \le n \le N - 1\\
 \begin{cases}
 \tilde{x}[n] = x[n]R_N\\
 \tilde{y}[n] = y[n]R_N

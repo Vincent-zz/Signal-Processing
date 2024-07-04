@@ -131,7 +131,7 @@ $x$|L/Z
 :---:|:---:
 $e^{at}u(t)$|$X(s) = \frac{1}{s - a},\text{Re}\{s\}>a$
 $-e^{at}u(-t)$|$X(s) = \frac{1}{s - a},\text{Re}\{s\}<a$
-$a^nu[n]$|$X(z) = \frac{z}{z-a},\|z\|>\|a\|$
-$-a^nu[-n-1]$|$X(z) = \frac{z}{z-a},\|z\|<\|a\|$
+$a^nu[n]$|$X(z) = \frac{1}{1-az^{-1}},\|z\|>\|a\|$
+$-a^nu[-n-1]$|$X(z) = \frac{1}{1-az^{-1}},\|z\|<\|a\|$
 
 </div>
