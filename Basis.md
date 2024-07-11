@@ -133,10 +133,4 @@ Z-$\|z\|$|$(0, r_H)$|$(r_L, +\infty)$|$(r_L, r_H)$|$(0, +\infty)$|bounded by pol
 
 </div>
 
-\* rational transform: ($m$ zeros, $n$ poles)
-
-$$
-H(s/z) = \frac{\prod_M ((s/z) - z_k)}{\prod_N ((s/z) - p_k)}
-$$
-
 \* whether boundries like $0, \infty$ are included in ROC depends on specific $h[n]$

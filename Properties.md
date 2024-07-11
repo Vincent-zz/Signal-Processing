@@ -117,11 +117,7 @@ $$
 \* about $\circledcirc$:
 
 $$
-x[n]\circledcirc y[n] = \tilde{x}[n] \circledast\tilde{y}[n], 0 \le n \le N - 1\\
-\begin{cases}
-\tilde{x}[n] = x[n]R_N\\
-\tilde{y}[n] = y[n]R_N
-\end{cases}
+x[n]\circledcirc y[n] = \tilde{x}[n] \circledast\tilde{y}[n], 0 \le n \le N - 1
 $$
 
 ## **3. Some Conclusions**

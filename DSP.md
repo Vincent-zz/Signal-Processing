@@ -86,15 +86,23 @@ It's easy to implement its *Convolution* with finite $h[n], 0 \le n \le N - 1$ b
 
 ## 3. Common Digital Systems
 
+(0)**Zeros and Poles**
+
+for all rational system: *Number of poles = Number of zeros* (hidden at $0, \infty$)
+
+- FIR: $p_k$ can only be at $0, \infty$
+- IIR: $p_k \ne 0, \infty$ exists
+
 (1) **All-Pass System**
 
 $$
-H(z) = \prod \frac{z^{-1} - z_0}{1-z^*_0z^{-1}}
+H(z) = \prod \frac{z^{-1} - z_0}{1-z^*_0z^{-1}}\\
+z_k = \frac{1}{p_k^*}
 $$
 
 implemented by difference-equation
 
-for casual stable LTI all-pass system: $grd(w) > 0$
+for casual stable LTI all-pass system: $grd(w) > 0$ and
 
 (2) **Linear-Phase System**
 
@@ -130,7 +138,7 @@ IV|$h[n] = -h[M - n]$|$M\text{ is odd}$|$\frac{\pi}{2}$|$-z^{-M}H(z^{-1})$
 
 (3) **Min-Phase System**
 
-All zeros and poles of casual, stable $H(z)$ are within unit-circle
+All $z_k$ and $p_k$ of casual, stable $H(z)$ with casual, stable $H_I(z)$ are within unit-circle
 
 ## 4. Digital Filter Design
 
@@ -168,24 +176,46 @@ $$
 x[n], 0 \le n \le N - 1
 $$
 
-How to derive DFT
+How to derive $M$-points DFT
 
 - **Defination**: Frequency Sampling
 
 $$
-  X[k] = X(e^{jw})\Large{|}_{w = \frac{2\pi}{N}k}
+  X[k] = X(e^{jw})\Large{|}_{w = \frac{2\pi}{M}k}
 $$
 
 - **DTFS of Extension**
 
 $$
-\tilde{x}[n] = x[n]R_N\\
+\tilde{x}[n] = x[n]R_M\\
 X[k] = N\tilde{X}_k
 $$
 
+\* For fully reconstruction, we require $M \ge N$
+
 Properties of DFT $\Leftarrow$ Properties of DTFS
 
-## 2. Short-Time FT
+## 2. Interpolation
+
+- Ideal: $M$-points DFT of $x[n], 0 \le n \le N - 1$
+
+$$
+x'[n] = \begin{cases}
+x[n]&, 0 \le n \le N - 1\\
+0&, N \le n \le M - 1
+\end{cases}\leftrightarrow X'[k]
+$$
+
+- Zero: $M = 2N$
+
+$$
+x'[n] = \begin{cases}
+\frac{1}{2}x[n]&, 0 \le n \le N - 1\\
+\frac{1}{2}x[n - N]&, N \le n \le M - 1
+\end{cases}\leftrightarrow X'[k]
+$$
+
+## 3. Short-Time FT
 
 For an infinite input signal $x[n]$, we can only derive DFT for *a finite part* of it by digital chips to estimate its frequency spectrum
 
@@ -197,7 +227,7 @@ Window function: $w[n], 0 \le n \le N - 1$
 
 There are many types of window function: Rectangle, Hanning, Hamming, Blackman, etc
 
-## 3. DFT Algorithm: FFT
+## 4. DFT Algorithm: FFT
 
 (1)**Decimation-In-Time**
 

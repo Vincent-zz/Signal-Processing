@@ -59,6 +59,13 @@ System function of LTI system that can be expressed by differential/difference-e
 
 **So, usually we only talk about rational system** 
 
+\* rational transform: *Number of poles = Number of zeros* (hidden at $0, \infty$)
+
+$$
+H(s/z) = \frac{\prod_M ((s/z) - z_k)}{\prod_N ((s/z) - p_k)}
+$$
+
+
 ## 4. Frequency Response of (Stable) LTI System
 
 Using Fourier-Transform
