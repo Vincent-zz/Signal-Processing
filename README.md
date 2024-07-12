@@ -11,4 +11,4 @@ CONTENTS
   - **System**--*L, Z analyzing*
   - **DSP**--*DFT, FFT*
 - Array Signal Processing
-  - **Uniform Linear Array**
+  - **Linear Algebra Basis**
