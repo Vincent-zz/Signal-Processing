@@ -8,7 +8,7 @@ $$
 \begin{aligned}
 &\text{non-singular} \Leftrightarrow \text{full rank}\Leftrightarrow \text{invertible}\\
 \Leftrightarrow &Ax = 0 \text{ with unique solution } x = O\\
-\Leftrightarrow &A = \begin{pmatrix} v_1 & v_2 & \cdots & v_n \end{pmatrix}\text{ linearly^* independent}
+\Leftrightarrow &A = \begin{pmatrix} v_1 & v_2 & \cdots & v_n \end{pmatrix}\text{ linearly independent}
 \end{aligned}
 $$
 
@@ -21,7 +21,7 @@ A \in C^{n\times n}\\
 A = A^H
 $$
 
-- unitary^*
+- unitary
 
 $$
 A \in C^{n\times n}\\
@@ -74,7 +74,7 @@ we have
 
 - $\sum k = n$
 - $1 \le s_i \le k_i$
-- $v_1 \in V_1$, $v_2 \in V_2$, ..., $v_m \in V_m$ are linearly^* independent
+- $v_1 \in V_1$, $v_2 \in V_2$, ..., $v_m \in V_m$ are linearly independent
 
 ### Decomposition
 
@@ -113,7 +113,7 @@ where
 
 $$
 \Sigma = \begin{pmatrix}\sigma_1 & 0 & \cdots & 0\\0 & \sigma_2 & \cdots & 0\\0 & 0 & \cdots & \sigma_n\\0 & 0 & \cdots & 0\\\vdots & \vdots & & \vdots\\0 & 0 & \cdots & 0\end{pmatrix}\in C^{m\times n}\\
-\text{unitary^* matrix: }U\in C^{m\times m}, V\in C^{n\times n}
+\text{unitary matrix: }U\in C^{m\times m}, V\in C^{n\times n}
 $$
 
 ## **2. Random Process**
@@ -138,7 +138,7 @@ R_x(t, t + \tau) &= E\{x(t)x^*(t + \tau)\}
 \end{aligned}
 $$
 
-Ergodicity^*:
+Ergodicity:
 
 $$
 \begin{aligned}
@@ -147,29 +147,18 @@ $$
 \end{aligned}
 $$
 
-## Stationary^*
-
-$$
-\begin{aligned}
-m_x(t) &= m_x\\
-R_x(t, t + \tau) &= R_x(\tau)
-\end{aligned}
-$$
-
-\* statistical-average is irrelevant to time
-
-\* Ergodicity^* $\Rightarrow$ Stationary^*
+## Stationary
 
 ## Correlation
 
 correlation of signal vector
 
 $$
-\boldsy^*mbol{X}(t) = \begin{pmatrix}x_1(t) & x_2(t) & \cdots & x_N(t)\end{pmatrix}^T
+\boldsymbol{X}(t) = \begin{pmatrix}x_1(t) & x_2(t) & \cdots & x_N(t)\end{pmatrix}^T
 $$
 
 $$
-R_{Xy^*}(t, t + \tau) = E\{\boldsy^*mbol{X}(t)\boldsy^*mbol{y^*}^H(t + \tau)\}\\
+R_{XY}(t, t + \tau) = E\{\boldsymbol{X}(t)\boldsymbol{Y}^H(t + \tau)\}\\
 = \begin{pmatrix}
 E\{x_1(t)y^*_1(t + \tau)\} & E\{x_1(t)y^*_2(t + \tau)\} & \cdots & E\{x_1(t)y^*_N(t + \tau)\}\\
 E\{x_2(t)y^*_1(t + \tau)\} & E\{x_2(t)y^*_2(t + \tau)\} & \cdots & E\{x_2(t)y^*_N(t + \tau)\}\\
