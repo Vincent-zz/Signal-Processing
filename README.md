@@ -11,5 +11,6 @@ CONTENTS
   - **System**--*L, Z analyzing*
   - **DSP**--*DFT, FFT*
 - Array Signal Processing
-  - **Linear Algebra Basis**
+  - **Math Basis**
   - **Physical Model**
+  - **Sub-Space**
