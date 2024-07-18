@@ -12,5 +12,5 @@ CONTENTS
   - **DSP**--*DFT, FFT*
 - Array Signal Processing
   - **Math Basis**
-  - **Physical Model**
+  - **Mathematical Model**
   - **Sub-Space**
